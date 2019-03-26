@@ -5,6 +5,6 @@
   "license": "MIT",
   "dependencies": {
     "window-fetch": "0.0.10",
-    "worker-native": "0.0.29"
+    "worker-native": "0.0.33"
   }
 }
