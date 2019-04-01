@@ -55,7 +55,7 @@ class ServiceWorker {
   }
 }
 
-module.exports = {
+const serviceWorker = {
   register(scriptUrl, options = {}) {
     if (!options.scope) {
       options.scope = 'file://' + __dirname + '/';
@@ -72,4 +72,9 @@ module.exports = {
   Response: fetch.Response,
   installAndActivate,
   resolveExtendableEvent */
+};
+module.exports = serviceWorker;
+
+if (module === require.main) {
+  serviceWorker.register(process.argv[2]);
 }
